@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Mp3</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header__nowplaying">
+                Now playing
+            </div>
+
+            <div class="header__currentsong">
+                <!-- <div class="currentsong__img-tag" style="background-image: url(./assets/img/ayato.jpg);">
+
+                </div>
+
+                <div class="currentsong__info">
+                    <div class="currentsong__info-name">
+                        Fathomless Swirls in the Forest
+                    </div>
+                    <div class="currentsong__info-artist">
+                        HoyoMix
+                    </div>
+                </div>
+                
+                <audio class="audio" muted>
+                    <source src="./assets/audio/rubia.mp3" type="audio/ogg">
+                </audio> -->
+            </div>
+            <div class="control">
+                <div class="btn-repeat">
+                    <i class="bi bi-arrow-repeat control-btn"></i>
+                </div>
+                <div class="btn-prev">
+                    <i class="bi bi-skip-start-fill control-btn"></i>
+                </div>
+                <div class="btn-play">
+                    <i class="bi bi-play-circle control-btn"></i>
+                </div>
+                <div class="btn-pause">
+                    <i class="bi bi-pause-circle control-btn"></i>
+                </div>
+                <div class="btn-next">
+                    <i class="bi bi-skip-end-fill control-btn"></i>
+                </div>
+                <div class="btn-random">
+                    <i class="bi bi-shuffle control-btn"></i>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-line"></div>
+                <input type="range" id="progress-bar"
+                 min="0" max="100" value="0" step="1">
+                </input>
+            </div>
+
+            
+            
+        </div>
+
+        <div class="list-songs">
+            <div class="song-item">
+                <div class="song-item_icon" style="background-image:url(./assets/img/ayato.jpg);"></div>
+                <div class="song-item__info">
+                    <div class="song-item__info-name">
+                        Fathomless Swirls in the Forest
+                    </div>
+                    <div class="song-item__info-author">
+                        HoyoMix
+                    </div>
+                </div>
+                <div class="song-item__option">
+                    option
+                </div>
+            </div>
+
+            <div class="song-item">
+                <div class="song-item_icon" style="background-image:url(./assets/img/ayato.jpg);"></div>
+                <div class="song-item__info">
+                    <div class="song-item__info-name">
+                        Fathomless Swirls in the Forest
+                    </div>
+                    <div class="song-item__info-author">
+                        HoyoMix
+                    </div>
+                </div>
+                <div class="song-item__option">
+                    option
+                </div>
+            </div>
+
+            <div class="song-item">
+                <div class="song-item_icon" style="background-image:url(./assets/img/ayato.jpg);"></div>
+                <div class="song-item__info">
+                    <div class="song-item__info-name">
+                        Fathomless Swirls in the Forest
+                    </div>
+                    <div class="song-item__info-author">
+                        HoyoMix
+                    </div>
+                </div>
+                <div class="song-item__option">
+                    option
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
