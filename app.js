@@ -181,8 +181,12 @@ var app = {
             } else {
                 this.isRepeat = true
                 repeatBtn.classList.add('active')
+                if(this.isRandom){
+                    this.isRandom = false
+                    randomBtn.classList.remove('active')
+                }
             }
-            // console.log('repeat:', this.isRepeat)
+            // console.log('is repeat:', this.isRepeat)
         }
 
         //random
@@ -194,8 +198,12 @@ var app = {
             } else {
                 this.isRandom = true
                 randomBtn.classList.add('active')
+                if(this.isRepeat){
+                    this.isRepeat = false
+                    repeatBtn.classList.remove('active')
+                }
             }
-            // console.log('random:', this.isRandom)
+            // console.log('is random:', this.isRandom)
         }
 
         audio.onended = function () {
@@ -203,6 +211,15 @@ var app = {
                 audio.load()
             } else {
                 app.currentIndex++
+                app.updateSong()
+            }
+
+            if (app.isRandom){
+                let randomIndex = app.currentIndex
+                do{
+                    randomIndex = Math.floor(Math.random()*app.songs.length)
+                }while(randomIndex == app.currentIndex)
+                app.currentIndex = randomIndex
                 app.updateSong()
             }
         }
