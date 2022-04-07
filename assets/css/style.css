@@ -43,6 +43,7 @@ body{
     color: white;
     padding: 10px 0;
     text-shadow: 0 0 20px #fff;
+    user-select:none;
 }
 .header__currentsong{
     display: flex;
