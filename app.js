@@ -92,7 +92,9 @@ var app = {
                 </div>
             </div>
             <div class="song-item__option">
-                option
+            <a href="${song.path}" download>
+                <i class="bi bi-download song-item__option-icon"></i>
+            </a>
             </div>
             </div>
             `
