@@ -207,7 +207,7 @@ var app = {
         }
 
         audio.onended = function () {
-            if (app.isRepeat) {
+            if (app.isRepeat && !app.isRandom) {
                 audio.load()
             } else {
                 app.currentIndex++

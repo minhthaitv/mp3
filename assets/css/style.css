@@ -227,8 +227,7 @@ body{
     box-shadow: 0 0 10px #fff;
 }
 .song-item:hover{
-    background: linear-gradient(to left, #00ff99 0%, #cc66ff 100%);
-    box-shadow: 0 0 10px #fff;
+    background-color: wheat;
 }
 
 .song-item:first-child{
