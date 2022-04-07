@@ -65,7 +65,7 @@ body{
     height: 200px;
     border-radius: 50%;
     background-size: cover;
-    animation: spinning 3s linear infinite;
+    animation: spinning 6s linear infinite;
     animation-play-state: paused;
     position: relative;
 }
@@ -222,6 +222,10 @@ body{
     cursor: pointer;
 }
 
+.song-item.active{
+    background: linear-gradient(to left, #00ff99 0%, #cc66ff 100%);
+    box-shadow: 0 0 10px #fff;
+}
 .song-item:hover{
     background: linear-gradient(to left, #00ff99 0%, #cc66ff 100%);
     box-shadow: 0 0 10px #fff;

@@ -77,11 +77,11 @@ var app = {
         `
         headerSongs.innerHTML = header_htmls
 
-
+        
         //render list song
         const htmls = this.songs.map((song) => {
             return `
-            <div class="song-item">
+            <div class="song-item ${app.currentIndex==song.id ? "active" : null}">
             <div class="song-item_icon" style="background-image:url(${song.img_path});"></div>
             <div class="song-item__info">
                 <div class="song-item__info-name">
@@ -182,7 +182,7 @@ var app = {
                 this.isRepeat = true
                 repeatBtn.classList.add('active')
             }
-            console.log('repeat:', this.isRepeat)
+            // console.log('repeat:', this.isRepeat)
         }
 
         //random
@@ -195,7 +195,7 @@ var app = {
                 this.isRandom = true
                 randomBtn.classList.add('active')
             }
-            console.log('random:', this.isRandom)
+            // console.log('random:', this.isRandom)
         }
 
         audio.onended = function () {
@@ -209,8 +209,8 @@ var app = {
 
         //songItem:
         const songItems = $$('.song-item')
-        songItems.forEach((Item,index) => {
-            Item.onclick = ()=>{
+        songItems.forEach((song,index) => {
+            song.onclick = ()=>{
                 app.currentIndex = index
                 app.updateSong()
             }
@@ -229,8 +229,6 @@ var app = {
         this.render()
         audio = $('.audio')
         audio.load()
-        const img = $('.currentsong__img-tag')
-        img.style['animation-play-state'] = 'running'
         this.handleEvent()
     },
     start: function () {
